@@ -85,10 +85,11 @@ func calculate(sourceOperation string, numbers []int) float64 {
 		mNumber := len(numbers) / 2
 
 		if len(numbers)%2 == 0 {
-			result = float64(numbers[mNumber])
+			result = (float64(numbers[mNumber-1]) + float64(numbers[mNumber])) / 2
+
 		} else {
 
-			result = (float64(numbers[mNumber-1]) + float64(numbers[mNumber])) / 2
+			result = float64(numbers[mNumber])
 		}
 	}
 	return result
